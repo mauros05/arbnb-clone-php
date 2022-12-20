@@ -7,9 +7,13 @@
 
     if($method == "GET"){ 
         switch ($_GET["ac"]) {
-        case 'lg':
+        case "lg":
             $LoginController->Login();
-            break;   
+            break;
+
+        case "rg":
+            $LoginController->Registro();
+            break;
         }
         
     } else {
