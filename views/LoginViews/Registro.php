@@ -6,47 +6,42 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-                <form>
-                    <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1cg">Name</label>
-                    </div>
+                <form id="registration-form">
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1cg">First Name</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="first_name">First Name</label>
+                    <input type="text" id="first_name"  name="first_name" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1cg">Last Name</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example3cg">Your Email</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cg">Password</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="password-confirm">Repeat your password</label>
+                    <input type="password" id="password-confirm" name="password_confirm" class="form-control form-control-lg" />
+                  </div>
 
-                    <div class="form-check d-flex justify-content-center mb-5">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                        <label class="form-check-label" for="form2Example3g"> I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a></label>
-                    </div>
+                    
+                  <button type="button" id="registrar" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    
 
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
-                    </div>
-
-                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php?ac=lg" class="fw-bold text-body"><u>Login here</u></a></p>
+                  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php?ac=lg" class="fw-bold text-body"><u>Login here</u></a></p>
                 </form>
             </div>
           </div>
