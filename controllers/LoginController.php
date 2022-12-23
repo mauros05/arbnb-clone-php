@@ -17,5 +17,11 @@
             require_once "views/LoginViews/Registro.php";
             require_once "views/Templates/Footer.php";
         }
+
+        public function GuardarRegistro($data){
+        echo json_encode($data);
+            
+        }
+
     }
 ?>

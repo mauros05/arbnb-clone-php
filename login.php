@@ -15,9 +15,10 @@
             $LoginController->Registro();
             break;
         }
-        
     } else {
-
+        if(isset($_POST["name"])){
+            $LoginController->GuardarRegistro($_POST);
+        }
     }
 
 
