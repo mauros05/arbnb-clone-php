@@ -17,7 +17,7 @@
         }
     } else {
         if(isset($_POST["name"])){
-            $LoginController->GuardarRegistro($_POST);
+            $LoginController->guardarRegistro($_POST);
         }
     }
 
