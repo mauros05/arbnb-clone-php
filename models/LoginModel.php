@@ -44,13 +44,15 @@
             $resQuery = mysqli_query($this->db, $query);
 
             if(mysqli_num_rows($resQuery) > 0){
-                $res["flag"] = 1;
+                while($rows = mysqli_fetch_assoc($resQuery)){
+                    $res["id_usuario"] = $rows["id_usuario"];
+                    $res["username"]   = $rows["usuario"];
+                }
+                return $res;
             } else {
-                $res["msg_error"] = "El correo o password es erroneo";
-                $res["flag"] = 0;
+                return  "El correo o password es erroneo";
             }
 
-            return $res;
         }
 
     }

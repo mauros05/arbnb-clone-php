@@ -28,6 +28,9 @@ $(document).ready(function(){
             obj.type = "POST";
 
             let res  = peticionAjax(obj);
+            if(res.flag == 1){
+                window.location = "index.php?ac=h"
+            }
 
 
         }
