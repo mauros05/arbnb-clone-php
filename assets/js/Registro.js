@@ -1,9 +1,12 @@
 $(document).ready(function(){
     let obj = {}
     $("#registrar").click(function(){
-        if($("#name").val()=="" || $("#first_name").val()=="" ||
-           $("#last_name").val()=="" || $("#email").val()=="" ||
-           $("#password").val()=="" || $("#password").val()!=$("#password-confirm").val() ){
+        if($("#name").val() == "" || 
+           $("#first_name").val() == "" ||
+           $("#last_name").val() == "" || 
+           $("#email").val()== "" ||
+           $("#password").val() == "" || 
+           $("#password").val() != $("#password-confirm").val()){
             
             if($("#name").val()==""){
                 $("#name-error").html("Name can not be empty");
@@ -54,10 +57,12 @@ $(document).ready(function(){
             }
 
         } else {
+
             let data = $("#registration-form").serialize();
             obj.data = data;
             obj.url  = "login.php";
             obj.type = "POST";
+
             let res  = peticionAjax(obj);
 
             if(res.error_correo_exist != null){
@@ -71,11 +76,6 @@ $(document).ready(function(){
                     window.location = "compras.php?ac=lg"
                 }, 5000);
             }
-
         }
-
-
-
-
     })    
 })

@@ -36,5 +36,22 @@
             return $res;
         }
 
+        public function validarLogin($data){
+            $query = "SELECT * 
+                      FROM usuarios 
+                      WHERE correo='".$data["correo"]."' AND password='".$data["password"]."'";
+
+            $resQuery = mysqli_query($this->db, $query);
+
+            if(mysqli_num_rows($resQuery) > 0){
+                $res["flag"] = 1;
+            } else {
+                $res["msg_error"] = "El correo o password es erroneo";
+                $res["flag"] = 0;
+            }
+
+            return $res;
+        }
+
     }
 ?>

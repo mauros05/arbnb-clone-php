@@ -18,6 +18,8 @@
     } else {
         if(isset($_POST["name"])){
             $LoginController->guardarRegistro($_POST);
+        } else {
+            $LoginController->validarLogin($_POST);
         }
     }
 

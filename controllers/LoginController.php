@@ -5,8 +5,9 @@
             $this->LoginModel = new LoginModel();
         }
         public function Login(){
-            $data["Title"]   = "Login";
-            $data["Url_css"] = "assets/css/login.css";
+            $data["Title"]      = "Login";
+            $data["Url_css"]    = "assets/css/login.css";
+            $data["Url_Jquery"] = "assets/js/Login.js";
 
             require_once "views/Templates/Header.php";
             require_once "views/LoginViews/Login.php";
@@ -30,8 +31,13 @@
        
            $res = $this->LoginModel->guardarRegistro($data);
 
-        echo json_encode($res);
-        exit;
+            echo json_encode($res);
+        }
+
+        public function validarLogin($data){
+            $res = $this->LoginModel->validarLogin($data);
+
+            echo json_encode($res);
         }
 
     }
