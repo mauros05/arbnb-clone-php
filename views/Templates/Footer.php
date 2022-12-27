@@ -6,12 +6,4 @@
     <script src="<?php echo $data["Url_Jquery"] ?>"></script>
 <?php } ?>
     </body>
-    <footer class="bg-dark text-center text-lg-start">
-    <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            
-            <a class="text-light" href="https://mdbootstrap.com/">© 2022 Copyright:  NXTCode.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
 </html> 

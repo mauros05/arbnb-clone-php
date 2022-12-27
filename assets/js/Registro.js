@@ -73,7 +73,7 @@ $(document).ready(function(){
                 $("#modalRegistro").modal("show");
 
                 setTimeout(function(){
-                    window.location = "compras.php?ac=lg"
+                    window.location = "login.php?ac=lg"
                 }, 5000);
             }
         }

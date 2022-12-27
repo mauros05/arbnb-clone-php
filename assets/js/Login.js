@@ -30,6 +30,9 @@ $(document).ready(function(){
             let res  = peticionAjax(obj);
             if(res.flag == 1){
                 window.location = "index.php?ac=h"
+            } else if(res.flag == 0){
+                $("#div-message").html(res.msg_error);
+                $("#modalLogin").modal("show");
             }
 
 

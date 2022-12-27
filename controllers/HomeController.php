@@ -15,7 +15,6 @@
 
         public function homeMenu(){
             require_once "config/Config.php";
-            var_dump($_SESSION);
             $data["Title"] = "Menu";
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
