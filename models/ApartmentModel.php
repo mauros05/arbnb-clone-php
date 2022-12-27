@@ -1,5 +1,5 @@
 <?php 
-    class ApartmentController {
+    class ApartmentModel{
         public function __construct(){
             
         }
@@ -21,7 +21,7 @@
         }
 
         public function edit(){
-            
+
         }
 
         public function update(){
