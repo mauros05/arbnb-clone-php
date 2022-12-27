@@ -27,8 +27,27 @@
             }
         }
 
-        public function show(){
+        public function show($id){
+            $query = "SELECT a.*, u.nombres, u.apellido_paterno, u.apellido_materno
+                      FROM apartments a
+                      INNER JOIN usuarios u
+                      ON a.id_usuario = u.id_usuario
+                      WHERE id_apartment=".$id;
 
+            $queryRes = mysqli_query($this->db, $query);
+
+            if(mysqli_num_rows($queryRes) > 0){
+                while($rows = mysqli_fetch_assoc($queryRes)){
+                    $data["id_apartment"]    = $rows["id_apartment"];
+                    $data["nombre"]          = $rows["nombre"];
+                    $data["descripcion"]     = $rows["descripcion"];
+                    $data["precio"]          = $rows["precio"];
+                    $data["nombre_completo"] = $rows["nombre"];
+                }
+                return $data;
+            } else {
+                return "No se encontro departamento";
+            }
         }
 
         public function new(){

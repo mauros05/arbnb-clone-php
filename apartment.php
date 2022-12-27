@@ -8,7 +8,7 @@
     if($Method == "GET"){
         switch ($_GET["ac"]) {
         case 's':
-            $ApartmentController->show();
+            $ApartmentController->show($_GET["idap"]);
             break;
         }
     } else {

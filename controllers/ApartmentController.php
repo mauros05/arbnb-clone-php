@@ -9,10 +9,12 @@
             $this->apartmentModel->index();
         }
 
-        public function show(){
+        public function show($id){
+            $res = $this->apartmentModel->show($id);
+            var_dump($res);
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
-            require_once "views/HomeViews/Home.php";
+            require_once "views/ApartmentViews/show.php";
             require_once "views/Templates/Footer.php";
         }
 
