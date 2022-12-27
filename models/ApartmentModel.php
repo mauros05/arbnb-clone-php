@@ -15,9 +15,10 @@
             if(mysqli_num_rows($queryRes) > 0){
                 $i = 0;
                 while($rows = mysqli_fetch_assoc($queryRes)){
-                    $data["nombre"][$i]      = $rows["nombre"];
-                    $data["descripcion"][$i] = $rows["descripcion"];
-                    $data["precio"][$i]      = $rows["precio"];
+                    $data["id_apartment"][$i] = $rows["id_apartment"];
+                    $data["nombre"][$i]       = $rows["nombre"];
+                    $data["descripcion"][$i]  = $rows["descripcion"];
+                    $data["precio"][$i]       = $rows["precio"];
                     $i ++;
                 }
                 return $data;
