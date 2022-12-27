@@ -11,15 +11,15 @@ $(document).ready(function(){
                 $("#correo-error").removeAttr("hidden")
             } else {
                 $("#correo-error").html("");
-                $("#correo-error").attr("hidden", true)
+                $("#correo-error").attr("hidden", true);
             }
 
             if(password == ""){
                 $("#password-error").html("El password no puede ser vacio");
-                $("#password-error").removeAttr("hidden")
+                $("#password-error").removeAttr("hidden");
             } else {
                 $("#password-error").html("");
-                $("#password-error").attr("hidden", true)
+                $("#password-error").attr("hidden", true);
             }
         } else {
 
@@ -34,9 +34,6 @@ $(document).ready(function(){
                 $("#div-message").html(res.msg_error);
                 $("#modalLogin").modal("show");
             }
-
-
         }
-
     })
 })
