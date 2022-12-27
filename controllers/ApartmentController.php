@@ -1,11 +1,12 @@
 <?php 
     class ApartmentController {
         public function __construct(){
-            
+            require_once "models/ApartmentModel.php";
+            $this->apartmentModel = new ApartmentModel();
         }
 
         public function index(){
-
+            $this->apartmentModel->index();
         }
 
         public function show(){
