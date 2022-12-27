@@ -48,6 +48,7 @@
             }
 
             echo json_encode($resValidacion);
+            exit;
         }
 
     }

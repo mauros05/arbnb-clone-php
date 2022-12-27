@@ -1,5 +1,10 @@
-<?php 
+<?php
+    
     class HomeController{
+        public function __construct(){
+            
+        }
+
         public function home(){
             $data["Title"] = "Home";
             require_once "views/Templates/Header.php";
@@ -9,6 +14,8 @@
         }
 
         public function homeMenu(){
+            require_once "config/Config.php";
+            var_dump($_SESSION);
             $data["Title"] = "Menu";
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";

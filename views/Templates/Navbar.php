@@ -28,8 +28,11 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <a href="login.php?ac=lg" class="btn btn-outline-success">Login</a>
+        <?php if (isset($_SESSION["id_usuario"])) { ?>
+          <a href="logout.php" class="btn btn-outline-danger">LogOut</a>
+        <?php } else { ?>
+          <a href="login.php?ac=lg" class="btn btn-outline-success">Login</a>
+        <?php } ?>
       </form>
     </div>
   </div>
