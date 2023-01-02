@@ -13,9 +13,11 @@
           <a class="nav-link active" aria-current="page" href="http://localhost/arbnb-clone/">Home</a>
         <?php } ?>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="apartment.php?ac=n">Create New Department</a>
-        </li>
+        <?php if (isset($_SESSION["id_usuario"])) { ?>
+          <li class="nav-item">
+            <a class="nav-link" href="apartment.php?ac=n">Create New Department</a>
+          </li>
+        <?php } ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown

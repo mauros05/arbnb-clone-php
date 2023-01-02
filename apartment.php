@@ -15,7 +15,11 @@
             break;
         }
     } else {
-
+        switch ($_POST["accion"]) {
+        case 'ca':
+            $ApartmentController->create($_POST);
+            break;
+        }
     }
 
 

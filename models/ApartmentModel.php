@@ -50,16 +50,8 @@
             }
         }
 
-        public function new(){
-
-        }
-
-        public function create(){
-
-        }
-
-        public function edit(){
-
+        public function create($data){
+            $query = "INSERT INTO apartments VALUES()";
         }
 
         public function update(){
