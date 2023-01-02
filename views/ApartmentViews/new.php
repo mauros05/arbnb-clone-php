@@ -34,7 +34,7 @@
             <div id="descripcion-error" style="color: red" hidden></div>
         </div>
 
-        <input type="text" name="usuario" value="<?= $_SESSION["id_usuario"] ?>" hidden>
+        <input type="text" name="id_usuario" value="<?= $_SESSION["id_usuario"] ?>" hidden>
         <input type="text" name="accion" value="ca" hidden>
             
         <button type="button" class="btn btn-dark mt-3 mb-3" id="crearApartamento">Crear Apartamento</button>

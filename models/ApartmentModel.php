@@ -51,7 +51,13 @@
         }
 
         public function create($data){
-            $query = "INSERT INTO apartments VALUES()";
+            $query = "INSERT INTO apartments(nombre, direccion, descripcion, precio, id_usuario) 
+                                  VALUES('".$data["nombre"]."',
+                                         '".$data["direccion"]."',
+                                         '".$data["descripcion"]."', 
+                                         ".$data["precio"].", 
+                                         ".$data["id_usuario"].")";
+            
         }
 
         public function update(){
