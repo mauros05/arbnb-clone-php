@@ -38,11 +38,10 @@
 
             if(mysqli_num_rows($queryRes) > 0){
                 while($rows = mysqli_fetch_assoc($queryRes)){
-                    $data["id_apartment"]    = $rows["id_apartment"];
                     $data["nombre"]          = $rows["nombre"];
                     $data["descripcion"]     = $rows["descripcion"];
                     $data["precio"]          = $rows["precio"];
-                    $data["nombre_completo"] = $rows["nombre"];
+                    $data["nombre_completo"] = $rows["nombres"]." ".$rows["apellido_paterno"]." ".$rows["apellido_materno"];
                 }
                 return $data;
             } else {

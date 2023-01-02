@@ -10,6 +10,9 @@
         case 's':
             $ApartmentController->show($_GET["idap"]);
             break;
+        case 'n':
+            $ApartmentController->new();
+            break;
         }
     } else {
 

@@ -1,7 +1,7 @@
 <main role="main">
   <section class="jumbotron text-center mt-5 mb-5">
     <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
+      <h1 class="jumbotron-heading">Arbnb with PHP example</h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
     </div>
   </section>
@@ -36,8 +36,7 @@
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
-    <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+    <p>Arbnb clone example is © Bootstrap, but please download and customize it for yourself!</p>
   </div>
 </footer>
 
