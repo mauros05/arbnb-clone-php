@@ -39,6 +39,7 @@
             if(mysqli_num_rows($queryRes) > 0){
                 while($rows = mysqli_fetch_assoc($queryRes)){
                     $data["nombre"]          = $rows["nombre"];
+                    $data["direccion"]       = $rows["direccion"];
                     $data["descripcion"]     = $rows["descripcion"];
                     $data["precio"]          = $rows["precio"];
                     $data["nombre_completo"] = $rows["nombres"]." ".$rows["apellido_paterno"]." ".$rows["apellido_materno"];
