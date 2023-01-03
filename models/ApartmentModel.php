@@ -37,11 +37,13 @@
             $queryRes = mysqli_query($this->db, $query);
 
             if(mysqli_num_rows($queryRes) > 0){
-                while($rows = mysqli_fetch_assoc($queryRes)){
+                while($rows = mysqli_fetch_assoc($queryRes)){                    
+                    $data["id_apartment"]    = $rows["id_apartment"];
                     $data["nombre"]          = $rows["nombre"];
                     $data["direccion"]       = $rows["direccion"];
                     $data["descripcion"]     = $rows["descripcion"];
                     $data["precio"]          = $rows["precio"];
+                    $data["id_usuario"]      = $rows["id_usuario"];
                     $data["nombre_completo"] = $rows["nombres"]." ".$rows["apellido_paterno"]." ".$rows["apellido_materno"];
                 }
                 return $data;
@@ -68,6 +70,12 @@
                 $res["res_message"] = "Guardado Exitoso";
                 return $res;
             }
+        }
+
+        public function edit($id){
+            $query = "SELECT * 
+                      FROM apartments 
+                      WHERE id_apartent =".$id;
         }
 
         public function update(){

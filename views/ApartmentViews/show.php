@@ -4,7 +4,12 @@
             <h1 class="display-3"><?= $res["nombre"]; ?></h1>
             <p>Direccion: <span><?= $res["direccion"]; ?></span></p>
             <p>Owner: <span><?= $res["nombre_completo"]; ?></span></p>
-            <p class="mt-2 mb-2"><a class="btn btn-primary btn-lg" href="#" role="button">Reservar</a></p>
+            <div class="d-flex">
+                <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="#" role="button">Reservar</a></p>
+                <?php if (isset($_SESSION["id_usuario"]) && $_SESSION["id_usuario"] == $res["id_usuario"]) { ?>
+                    <p class="mt-2 mb-2"><a class="btn btn-danger btn-lg" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Editar</a></p>
+                <?php } ?>
+            </div>
         </div>
     </div>
 

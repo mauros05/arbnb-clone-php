@@ -40,6 +40,7 @@ $(document).ready(function(){
                 $("#descripcion-error").attr("hidden", true)
             }
         } else {
+            
             let data  = $("#crear-apartamento").serialize();
             obj.data  = data;
             obj.url   = "apartment.php";
@@ -59,13 +60,5 @@ $(document).ready(function(){
                 $("#modalCreateApartment").modal("show")
             }
         }
-
-
-
     })
-
-
-
-
-
 })

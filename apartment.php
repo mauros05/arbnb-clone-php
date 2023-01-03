@@ -7,11 +7,17 @@
 
     if($Method == "GET"){
         switch ($_GET["ac"]) {
+        case 'swl':
+            $ApartmentController->show_without_login($_GET["idap"]);
+            break;
         case 's':
             $ApartmentController->show($_GET["idap"]);
             break;
         case 'n':
             $ApartmentController->new();
+            break;
+        case 'e':
+            $ApartmentController->edit($_GET["idap"]);
             break;
         }
     } else {

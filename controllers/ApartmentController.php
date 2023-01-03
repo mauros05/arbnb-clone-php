@@ -11,7 +11,8 @@
 
         public function show($id){
             $res = $this->apartmentModel->show($id);
-            
+
+            require_once "config/Config.php";
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
             require_once "views/ApartmentViews/show.php";
@@ -35,8 +36,17 @@
             echo json_encode($res);
         }
 
-        public function edit(){
+        public function edit($id){
+            $data["Title"]      = "Editar Departamento";
+            // $data["Url_Jquery"] = "assets/js/CrearApartamento.js";
+
+            $res = $this->apartmentModel->edit($id);
             
+            require_once "config/Config.php";
+            require_once "views/Templates/Header.php";
+            require_once "views/Templates/Navbar.php";
+            require_once "views/ApartmentViews/edit.php";
+            require_once "views/Templates/Footer.php";
         }
 
         public function update(){
@@ -45,6 +55,16 @@
 
         public function delete(){
 
+        }
+
+
+        public function show_without_login($id){
+            $res = $this->apartmentModel->show($id);
+
+            require_once "views/Templates/Header.php";
+            require_once "views/Templates/Navbar.php";
+            require_once "views/ApartmentViews/show.php";
+            require_once "views/Templates/Footer.php";
         }
     }
 ?>
