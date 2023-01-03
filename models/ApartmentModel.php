@@ -75,7 +75,22 @@
         public function edit($id){
             $query = "SELECT * 
                       FROM apartments 
-                      WHERE id_apartent =".$id;
+                      WHERE id_apartment =".$id;
+                      
+            $queryRes = mysqli_query($this->db, $query);
+
+            if(mysqli_num_rows($queryRes) > 0){
+                while($rows = mysqli_fetch_assoc($queryRes)){
+                    $data["id_apartment"]    = $rows["id_apartment"];
+                    $data["nombre"]          = $rows["nombre"];
+                    $data["direccion"]       = $rows["direccion"];
+                    $data["descripcion"]     = $rows["descripcion"];
+                    $data["precio"]          = $rows["precio"];
+                }
+                return $data;
+            } else {
+                return "No se encontro el Apartamento";
+            }
         }
 
         public function update(){

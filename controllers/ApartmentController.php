@@ -41,6 +41,8 @@
             // $data["Url_Jquery"] = "assets/js/CrearApartamento.js";
 
             $res = $this->apartmentModel->edit($id);
+
+            var_dump($res);
             
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
