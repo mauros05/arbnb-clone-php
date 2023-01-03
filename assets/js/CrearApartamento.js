@@ -46,6 +46,18 @@ $(document).ready(function(){
             obj.type  = "POST";
 
             let res  = peticionAjax(obj);
+            
+            if(res.flag == 1){
+                $("#div-message").html(res.res_message);
+                $("#modalCreateApartment").modal("show")
+
+                setTimeout(function(){
+                    window.location = "index.php?ac=h"
+                }, 5000);
+            } else {
+                $("#div-message").html(res.res_message);
+                $("#modalCreateApartment").modal("show")
+            }
         }
 
 

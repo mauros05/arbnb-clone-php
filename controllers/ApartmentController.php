@@ -31,6 +31,8 @@
 
         public function create($data){
             $res = $this->apartmentModel->create($data);
+
+            echo json_encode($res);
         }
 
         public function edit(){

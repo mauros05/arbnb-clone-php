@@ -60,9 +60,13 @@
             $queryRes = mysqli_query($this->db, $query);
             
             if(!$queryRes){
-                return "Hubo un error al guardar el departamento";
+                $res["flag"] = 0;
+                $res["res_message"] = "Hubo un error al guardar el departamento";
+                return $res;
             }else {
-                return "Guardado Exitoso";
+                $res["flag"] = 1;
+                $res["res_message"] = "Guardado Exitoso";
+                return $res;
             }
         }
 
