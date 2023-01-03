@@ -57,7 +57,13 @@
                                          '".$data["descripcion"]."', 
                                          ".$data["precio"].", 
                                          ".$data["id_usuario"].")";
+            $queryRes = mysqli_query($this->db, $query);
             
+            if(!$queryRes){
+                return "Hubo un error al guardar el departamento";
+            }else {
+                return "Guardado Exitoso";
+            }
         }
 
         public function update(){
