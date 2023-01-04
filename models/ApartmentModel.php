@@ -8,7 +8,8 @@
 
         public function index(){
             $query = "SELECT * 
-                      FROM apartments";
+                      FROM apartments
+                      WHERE status = 1";
 
             $queryRes = mysqli_query($this->db, $query);
 
@@ -21,7 +22,9 @@
                     $data["precio"][$i]       = $rows["precio"];
                     $i ++;
                 }
+
                 return $data;
+                
             } else {
                 return "No se encontraron Departamentos";
             }
