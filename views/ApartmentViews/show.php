@@ -7,7 +7,8 @@
             <div class="d-flex">
                 <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="#" role="button">Reservar</a></p>
                 <?php if (isset($_SESSION["id_usuario"]) && $_SESSION["id_usuario"] == $res["id_usuario"]) { ?>
-                    <p class="mt-2 mb-2"><a class="btn btn-danger btn-lg" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Editar</a></p>
+                    <p class="mt-2 mb-2"><a class="btn btn-primary btn-lg me-2" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Editar</a></p>
+                    <p class="mt-2 mb-2"><a class="btn btn-danger btn-lg" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Borrar</a></p>
                 <?php } ?>
             </div>
         </div>
