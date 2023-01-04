@@ -28,6 +28,9 @@
         case 'ea':
             $ApartmentController->update($_POST);
             break;
+        case 'ba':
+            $ApartmentController->delete($_POST["id_apartment"]);
+            break;
         }
     }
 

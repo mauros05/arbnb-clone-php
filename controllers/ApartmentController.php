@@ -11,6 +11,8 @@
 
         public function show($id){
             $res = $this->apartmentModel->show($id);
+            $data["Title"]      = $res["nombre"];
+            $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
 
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
@@ -55,8 +57,8 @@
             echo json_encode($res);
         }
 
-        public function delete(){
-
+        public function delete($id){
+            $res = $this->apartmentModel->delete($id);
         }
 
 
