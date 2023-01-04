@@ -25,6 +25,9 @@
         case 'ca':
             $ApartmentController->create($_POST);
             break;
+        case 'ea':
+            $ApartmentController->update($_POST);
+            break;
         }
     }
 

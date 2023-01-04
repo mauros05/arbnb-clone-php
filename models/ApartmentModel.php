@@ -63,7 +63,7 @@
             
             if(!$queryRes){
                 $res["flag"] = 0;
-                $res["res_message"] = "Hubo un error al guardar el departamento";
+                $res["res_message"] = "Hubo un error al guardar el apartamento";
                 return $res;
             }else {
                 $res["flag"] = 1;
@@ -76,7 +76,7 @@
             $query = "SELECT * 
                       FROM apartments 
                       WHERE id_apartment =".$id;
-                      
+
             $queryRes = mysqli_query($this->db, $query);
 
             if(mysqli_num_rows($queryRes) > 0){
@@ -93,8 +93,42 @@
             }
         }
 
-        public function update(){
+        public function update($data){
+            $queryVerificar = "SELECT * 
+                               FROM apartments 
+                               WHERE id_apartment=".$data["id_apartment"]."
+                               AND nombre='".$data["nombre"] ."'
+                               AND descripcion='".$data["descripcion"] ."'
+                               AND direccion='".$data["direccion"] ."'
+                               AND precio=".$data["precio"] ." 
+                               AND id_usuario=".$data["id_usuario"];
 
+            $resQueryVerificar = mysqli_query($this->db, $queryVerificar);
+
+            if(mysqli_num_rows($resQueryVerificar) == 0) {
+                $queryUpdate = "UPDATE apartments SET nombre='".$data["nombre"] ."',
+                                                      descripcion='".$data["descripcion"] ."',
+                                                      direccion='".$data["direccion"] ."',
+                                                      precio=".$data["precio"]." 
+                                                      WHERE id_apartment=".$data["id_apartment"];
+
+            
+                $resEditar = mysqli_query($this->db, $queryUpdate);
+
+                if(!$resEditar){
+                    $res["flag"] = 0;
+                    $res["res_message"] = "Hubo un error al editar el apartamento";
+                    return $res;
+                }else {
+                    $res["flag"] = 1;
+                    $res["res_message"] = "Edicion Exitosa";
+                    return $res;
+                }
+            } else {
+                $res["flag"] = 0;
+                $res["res_message"] = "El apartamento ya se encuentra registrado";
+                return $res;
+            }
         }
 
         public function delete(){

@@ -1,12 +1,10 @@
 $(document).ready(function(){
     let obj = {};
-    $("#crearApartamento").click(function(event){
-        event.preventDefault;
-
-        if($("#nombre").val() =="" || 
-           $("#direccion").val() =="" || 
-           $("#precio").val() =="" || 
-           $("#descripcion").val() =="" ){
+    $("#editarApartamento").click(function(){
+        if($("#nombre").val()=="" || 
+           $("#direccion").val()=="" ||
+           $("#precio").val()=="" ||
+           $("#descripcion").val()==""){
 
             if($("#nombre").val() == ""){
                 $("#nombre-error").html("El nombre no puede ser vacio");
@@ -40,14 +38,13 @@ $(document).ready(function(){
                 $("#descripcion-error").attr("hidden", true);
             }
         } else {
-            
-            let data  = $("#crear-apartamento").serialize();
-            obj.data  = data;
+            let data = $("#editar-apartamento").serialize();
+            obj.data = data;
             obj.url   = "apartment.php";
             obj.type  = "POST";
 
             let res  = peticionAjax(obj);
-            
+
             if(res.flag == 1){
                 $("#div-message").html(res.res_message);
                 $("#modalCreateApartment").modal("show")

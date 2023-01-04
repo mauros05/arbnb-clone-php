@@ -38,12 +38,10 @@
 
         public function edit($id){
             $data["Title"]      = "Editar Departamento";
-            // $data["Url_Jquery"] = "assets/js/CrearApartamento.js";
+            $data["Url_Jquery"] = "assets/js/EditarApartamento.js";
 
             $res = $this->apartmentModel->edit($id);
 
-            var_dump($res);
-            
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
@@ -51,8 +49,10 @@
             require_once "views/Templates/Footer.php";
         }
 
-        public function update(){
+        public function update($data){
+            $res = $this->apartmentModel->update($data);
 
+            echo json_encode($res);
         }
 
         public function delete(){

@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="" method="" enctype="multipart/form-data" class="mt-3" id="crear-apartamento">
+    <form action="" method="" enctype="multipart/form-data" class="mt-3" id="editar-apartamento">
         <h1 class="mb-3">Editar Apartamento</h1>
 			
         <div class="row mb-4">
@@ -34,10 +34,11 @@
             <div id="descripcion-error" style="color: red" hidden></div>
         </div>
 
+        <input type="text" name="id_apartment" value="<?= $res["id_apartment"] ?>" hidden>
         <input type="text" name="id_usuario" value="<?= $_SESSION["id_usuario"] ?>" hidden>
         <input type="text" name="accion" value="ea" hidden>
             
-        <button type="button" class="btn btn-dark mt-3 mb-3" id="editarApartamento">Editar Apartamento</button>
+        <button type="button" class="btn btn-dark mt-3 mb-3" id="editarApartamento">Editar</button>
     </form>
 </div>
 
