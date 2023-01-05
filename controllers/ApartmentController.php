@@ -8,9 +8,6 @@
         public function index_my_apartments($id){
             $res = $this->apartmentModel->index_my_apartments($id);
             $data["Title"]      = "Mis apartamentos";
-            // $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
-
-        // var_dump($res);
             
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
@@ -72,7 +69,6 @@
 
             echo json_encode($res);
         }
-
 
         public function show_without_login($id){
             $res = $this->apartmentModel->show($id);

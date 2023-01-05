@@ -1,10 +1,9 @@
 <main role="main">
-  <section class="jumbotron text-center mt-5 mb-5">
-    <div class="container">
+  <div class="jumbotron d-flex align-items-center" style="background-color: white; height: 200px; width: auto;">
+    <div class="container d-flex justify-content-center ">
       <h1 class="jumbotron-heading">Arbnb with PHP example</h1>
     </div>
-  </section>
-
+  </div>
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
@@ -29,14 +28,3 @@
     </div>
   </div>
 </main>
-
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Arbnb clone example is © Bootstrap, but please download and customize it for yourself!</p>
-  </div>
-</footer>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="508" height="225" viewBox="0 0 508 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body>
