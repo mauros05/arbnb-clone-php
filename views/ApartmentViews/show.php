@@ -33,6 +33,7 @@
 
 <input type="text"  id="id-apartment" value="<?= $res["id_apartment"] ?>" hidden>
 
+<!-- Modal para seleccionar la accion de borrar  -->
 <div class="modal fade" id="modalDeleteApartment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -50,3 +51,17 @@
   </div>
 </div>
 </form>
+
+<!-- Modal para mostrar que la accion se realizo -->
+<div class="modal fade" id="modalAccion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="div-message">
+        ...
+      </div>
+    </div>
+  </div>
+</div>

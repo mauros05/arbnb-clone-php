@@ -59,6 +59,8 @@
 
         public function delete($id){
             $res = $this->apartmentModel->delete($id);
+
+            echo json_encode($res);
         }
 
 

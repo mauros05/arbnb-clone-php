@@ -134,8 +134,18 @@
             }
         }
 
-        public function delete(){
-
+        public function delete($id){
+            $queryUpdate = "UPDATE apartments SET status = 0 WHERE id_apartment=".$id;
+            $queryRes = mysqli_query($this->db, $queryUpdate);
+            if(!$queryRes){
+                $res["flag"] = 0;
+                $res["res_message"] = "Hubo un error al realizar la accion";
+                return $res;
+            }else {
+                $res["flag"] = 1;
+                $res["res_message"] = "Se ha realizado la accion exitosamente";
+                return $res;
+            }
         }
     }
 ?>
