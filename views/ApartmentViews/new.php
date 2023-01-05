@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
     <form action="" method="" enctype="multipart/form-data" class="mt-3" id="crear-apartamento">
         <h1 class="mb-3">Crear Apartamento</h1>
 			
