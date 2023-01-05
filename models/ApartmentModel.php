@@ -147,5 +147,27 @@
                 return $res;
             }
         }
+
+        public function index_my_apartments($id){
+            $query = "SELECT * FROM apartments WHERE id_usuario =".$id;
+            $queryRes = mysqli_query($this->db, $query);
+
+            if(mysqli_num_rows($queryRes) > 0){
+                $i = 0;
+                while($rows = mysqli_fetch_assoc($queryRes)){
+                    $data["id_apartment"][$i] = $rows["id_apartment"];
+                    $data["nombre"][$i]       = $rows["nombre"];
+                    $data["descripcion"][$i]  = $rows["descripcion"];
+                    $data["precio"][$i]       = $rows["precio"];
+                    $i ++;
+                }
+
+                return $data;
+                
+            } else {
+                $data["message"] = "No se encontraron Departamentos";
+                return $data;
+            }
+        }
     }
 ?>

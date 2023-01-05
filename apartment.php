@@ -19,6 +19,9 @@
         case 'e':
             $ApartmentController->edit($_GET["idap"]);
             break;
+        case 'ma':
+            $ApartmentController->index_my_apartments($_GET["idu"]);
+            break;
         }
     } else {
         switch ($_POST["accion"]) {

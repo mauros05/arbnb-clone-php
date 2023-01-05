@@ -5,8 +5,18 @@
             $this->apartmentModel = new ApartmentModel();
         }
 
-        public function index(){
-            $this->apartmentModel->index();
+        public function index_my_apartments($id){
+            $res = $this->apartmentModel->index_my_apartments($id);
+            $data["Title"]      = "Mis apartamentos";
+            // $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
+
+        // var_dump($res);
+            
+            require_once "config/Config.php";
+            require_once "views/Templates/Header.php";
+            require_once "views/Templates/Navbar.php";
+            require_once "views/ApartmentViews/index.php";
+            require_once "views/Templates/Footer.php";
         }
 
         public function show($id){
