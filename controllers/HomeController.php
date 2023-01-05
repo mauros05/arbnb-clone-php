@@ -10,6 +10,7 @@
             $data["Title"] = "Home";
             
             $res = $this->apartmentModel->index();
+            
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
             require_once "views/HomeViews/Home.php";
@@ -17,10 +18,11 @@
         }
 
         public function homeMenu(){
-            require_once "config/Config.php";
             $data["Title"] = "Menu";
             
             $res = $this->apartmentModel->index();
+            
+            require_once "config/Config.php";
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
             require_once "views/HomeViews/Menu.php";
