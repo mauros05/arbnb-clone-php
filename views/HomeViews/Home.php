@@ -18,7 +18,7 @@
                 <div class="btn-group">
                   <a href="apartment.php?ac=swl&idap=<?= $res["id_apartment"][$i] ?>" class="btn btn-sm btn-outline-secondary">View</a>
                 </div>
-                <span class="text-muted">$<small class="text-muted"><?= $res["precio"][$i] ?></small></span>
+                <span class="text-muted"><i class="fa-sharp fa-solid fa-dollar-sign"></i><small class="text-muted"><?= $res["precio"][$i] ?></small></span>
               </div>
             </div>
           </div>
@@ -28,3 +28,4 @@
     </div>
   </div>
 </main>
+
