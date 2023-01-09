@@ -6,6 +6,8 @@
         }
 
         public function new($data){
+            $res = $this->BookingsModel->new($data);
+        var_dump($res);
             $data["Title"]      = "Booking Apartment";
             // $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
 
