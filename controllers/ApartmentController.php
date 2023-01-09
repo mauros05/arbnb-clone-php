@@ -2,11 +2,11 @@
     class ApartmentController {
         public function __construct(){
             require_once "models/ApartmentModel.php";
-            $this->apartmentModel = new ApartmentModel();
+            $this->ApartmentModel = new ApartmentModel();
         }
 
         public function index_my_apartments($id){
-            $res = $this->apartmentModel->index_my_apartments($id);
+            $res = $this->ApartmentModel->index_my_apartments($id);
             $data["Title"]      = "Mis apartamentos";
             
             require_once "config/Config.php";
@@ -17,7 +17,7 @@
         }
 
         public function show($id){
-            $res = $this->apartmentModel->show($id);
+            $res = $this->ApartmentModel->show($id);
             $data["Title"]      = $res["nombre"];
             $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
 
@@ -40,7 +40,7 @@
         }
 
         public function create($data){
-            $res = $this->apartmentModel->create($data);
+            $res = $this->ApartmentModel->create($data);
 
             echo json_encode($res);
         }
@@ -49,7 +49,7 @@
             $data["Title"]      = "Editar Departamento";
             $data["Url_Jquery"] = "assets/js/EditarApartamento.js";
 
-            $res = $this->apartmentModel->edit($id);
+            $res = $this->ApartmentModel->edit($id);
 
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
@@ -59,19 +59,19 @@
         }
 
         public function update($data){
-            $res = $this->apartmentModel->update($data);
+            $res = $this->ApartmentModel->update($data);
 
             echo json_encode($res);
         }
 
         public function delete($id){
-            $res = $this->apartmentModel->delete($id);
+            $res = $this->ApartmentModel->delete($id);
 
             echo json_encode($res);
         }
 
         public function show_without_login($id){
-            $res = $this->apartmentModel->show($id);
+            $res = $this->ApartmentModel->show($id);
 
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";

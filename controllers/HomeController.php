@@ -3,13 +3,13 @@
     class HomeController{
         public function __construct(){
             require_once "models/ApartmentModel.php";
-            $this->apartmentModel = new ApartmentModel();
+            $this->ApartmentModel = new ApartmentModel();
         }
 
         public function home(){
             $data["Title"] = "Home";
             
-            $res = $this->apartmentModel->index();
+            $res = $this->ApartmentModel->index();
             
             require_once "views/Templates/Header.php";
             require_once "views/Templates/Navbar.php";
@@ -20,7 +20,7 @@
         public function homeMenu(){
             $data["Title"] = "Menu";
             
-            $res = $this->apartmentModel->index();
+            $res = $this->ApartmentModel->index();
             
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
