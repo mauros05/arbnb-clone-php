@@ -6,7 +6,13 @@
             <p>Direccion: <span><?= $res["direccion"]; ?></span></p>
             <p>Owner: <span><?= $res["nombre_completo"]; ?></span></p>
             <div class="d-flex">
-                <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="#" role="button">Reservar</a></p>
+                <?php var_dump($res); if(isset($_SESSION)) {?>
+                  <?php if($_SESSION["id_usuario"] != $res["id_usuario"]) {?>
+                    <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="bookings.php?ac=r&idap=<?= $res["id_apartment"] ?>&idu=<?= $_SESSION["id_usuario"] ?>" role="button">Reservar</a></p>
+                  <?php } ?>
+                <?php } else { ?>
+                  <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="login.php?ac=lg" role="button">Reservar</a></p>
+                <?php }  ?>
                 <?php if (isset($_SESSION["id_usuario"]) && $_SESSION["id_usuario"] == $res["id_usuario"]) { ?>
                     <p class="mt-2 mb-2"><a class="btn btn-primary btn-lg me-2" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Editar</a></p>
                     <p class="mt-2 mb-2"><a href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button"></a></p>
