@@ -76,7 +76,7 @@
         <input type="text" name="id_user_booking" value="<?= $_SESSION["id_usuario"] ?>" hidden>
         <input type="text" name="accion" value="cb" hidden>
             
-        <button type="button" class="btn btn-dark mt-3 mb-3" id="crearApartamento">Reservar</button>
+        <button type="button" class="btn btn-dark mt-3 mb-3" id="crearBooking">Reservar</button>
     </form>
 </div>
 
