@@ -25,10 +25,8 @@
                     $datos["nombre_ap"]        = $row["nombre"];
                     $datos["direccion"]        = $row["direccion"];
                     $datos["descripcion"]      = $row["descripcion"];
-                    $datos["precio"]           = $row["nombre"];
-                    $datos["nombre_us"]        = $row["nombres"];
-                    $datos["apellido_paterno"] = $row["apellido_paterno"];
-                    $datos["apellido_materno"] = $row["apellido_materno"];
+                    $datos["precio"]           = $row["precio"];
+                    $datos["nombre_us"]        = $row["nombres"]." ".$row["apellido_paterno"]." ".$row["apellido_materno"];
                 }
             }
 
@@ -40,9 +38,7 @@
 
             if(mysqli_num_rows($resQueryUser)> 0){
                 while($row = mysqli_fetch_assoc( $resQueryUser)){
-                    $datos["nombre_us_booking"]        = $row["nombres"];
-                    $datos["apellido_paterno_booking"] = $row["apellido_paterno"];
-                    $datos["apellido_materno_booking"] = $row["apellido_materno"];
+                    $datos["nombre_us_booking"]        = $row["nombres"]." ".$row["apellido_paterno"]." ".$row["apellido_materno"];
                 }
             }
 
