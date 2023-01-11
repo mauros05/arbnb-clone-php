@@ -15,14 +15,14 @@
                                     <span>Dueño</span><span><?= $res["nombre_us"] ?></span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <span>Precio por noche</span><span>$<?= $res["precio"] ?></span>
+                                    <span>Precio por noche</span><span>$<span id="price-night"><?= $res["precio"] ?></span> </span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <span>Numero de Noches</span><span>0</span>
+                                    <span>Numero de Noches</span><span id="num-days">0</span>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between total font-weight-bold mt-4">
-                                <span>Total</span><span>$0</span>
+                                <span>Total</span><span>$<span id="total-price">0</span> </span>
                             </div>
                         </div>
                     </div>
@@ -51,6 +51,7 @@
             </div>
         </div>
     </div>
+
     <form action="" method="" enctype="multipart/form-data" class="mt-3" id="crear-apartamento">
         
 
@@ -66,7 +67,7 @@
             <div class="col">
                 <div>
                     <label for="end-date" class="form-label">Fecha de Finalizacion:</label>
-                    <input type="date" name="end-date" class="form-control" id="end-date" value=''/>
+                    <input type="date" name="end-date" class="form-control" id="end-date" value='' disabled/>
                     <div id="end-date-error" style="color: red" hidden></div>
                 </div>
             </div>
