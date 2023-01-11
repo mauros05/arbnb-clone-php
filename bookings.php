@@ -12,7 +12,7 @@
             break;
         }
     } else {
-
+        $BookingsController->create($_POST);
     }
 
 ?>

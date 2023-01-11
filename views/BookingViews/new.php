@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <form action="" method="" enctype="multipart/form-data" class="mt-3" id="crear-apartamento">
+    <form action="" method="" enctype="multipart/form-data" class="mt-3" id="crear-booking">
         
 
         <div class="row mb-4">
@@ -73,8 +73,10 @@
             </div>
         </div>
 
-        <input type="text" name="id_apartment" value="<?= $_SESSION["id_usuario"] ?>" hidden>
+        <input type="text" name="id_apartment" value="<?= $res["id_apartment"] ?>" hidden>
         <input type="text" name="id_user_booking" value="<?= $_SESSION["id_usuario"] ?>" hidden>
+        <input type="text" name="num_dias" id="num-days-total" value="" hidden>
+        <input type="text" name="precio_total" id="precio_total" value="" hidden>
         <input type="text" name="accion" value="cb" hidden>
             
         <button type="button" class="btn btn-dark mt-3 mb-3" id="crearBooking">Reservar</button>
@@ -82,7 +84,7 @@
 </div>
 
 
-<div class="modal fade" id="modalCreateApartment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCreateBooking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,8 +98,8 @@
 </div>
 
 <style>
-.cards-container{
-    display: flex;
-}
+    .cards-container{
+        display: flex;
+    }
 
 </style>

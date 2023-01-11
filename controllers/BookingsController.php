@@ -17,8 +17,10 @@
             require_once "views/Templates/Footer.php";
         }
 
-        public function create(){
+        public function create($data){
+            $res = $this->BookingsModel->create($data);
 
+            echo json_encode($res);
         }
     }
 ?>
