@@ -67,10 +67,10 @@ $(document).ready(function(){
 
             if(res.error_correo_exist != null){
                 $("#div-message").html(res.error_correo_exist);
-                $("#modalRegistro").modal("show");
+                $("#modalRegister").modal("show");
             } else {
                 $("#div-message").html(res.msg_true);
-                $("#modalRegistro").modal("show");
+                $("#modalRegister").modal("show");
 
                 setTimeout(function(){
                     window.location = "login.php?ac=lg"

@@ -6,14 +6,15 @@
             $this->db = $dbConnect->connect();
         }
 
-        public function guardarRegistro($data){
+        public function saveRegister($data){
             $queryBuscar    = "SELECT * 
                                FROM usuarios 
                                WHERE correo ='".$data["email"]."'";
+
             $resQueryBuscar = mysqli_query($this->db, $queryBuscar);
 
             if(mysqli_num_rows($resQueryBuscar)  >= 1) {
-                $res["error_correo_exist"] = "Este correo ya esta registrado";            
+                $res["error_correo_exist"] = "This email was already registered";            
                 return $res;
             }
 
@@ -28,15 +29,15 @@
             $resQueryRegistrar = mysqli_query($this->db, $queryRegistrar);
             
             if($resQueryRegistrar == TRUE){
-                $res["msg_true"] = "El registro fue exitoso";
+                $res["msg_true"] = "The register was successful";
             } else {
-                $res["msg_false"] = "Hubo un error en el registro";
+                $res["msg_false"] = "There was an error in the register";
             }
 
             return $res;
         }
 
-        public function validarLogin($data){
+        public function validLogin($data){
             $query = "SELECT * 
                       FROM usuarios 
                       WHERE correo='".$data["correo"]."' AND password='".$data["password"]."'";

@@ -14,28 +14,28 @@
             require_once "views/Templates/Footer.php";
         }
 
-        public function Registro(){
-            $data["Title"]      = "Registro";
+        public function Register(){
+            $data["Title"]      = "Register";
             $data["Url_css"]    = "assets/css/registration.css";
-            $data["Url_Jquery"] = "assets/js/Registro.js";
+            $data["Url_Jquery"] = "assets/js/Register.js";
             
             require_once "views/Templates/Header.php";
-            require_once "views/LoginViews/Registro.php";
+            require_once "views/LoginViews/Register.php";
             require_once "views/Templates/Footer.php";
         }
 
-        public function guardarRegistro($data){
+        public function saveRegister($data){
             // Metodo para generar el Usuario
             $PrimerNombre     = explode(" ",$data["name"]);
             $data["username"] = $PrimerNombre[0] . $data["first_name"];
        
-            $res = $this->LoginModel->guardarRegistro($data);
+            $res = $this->LoginModel->saveRegister($data);
 
             echo json_encode($res);
         }
 
-        public function validarLogin($data){
-            $res = $this->LoginModel->validarLogin($data);
+        public function validLogin($data){
+            $res = $this->LoginModel->validLogin($data);
             $resValidacion = NULL;
 
             if(!empty($res["id_usuario"])){

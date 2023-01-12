@@ -12,14 +12,14 @@
             break;
 
         case "rg":
-            $LoginController->Registro();
+            $LoginController->Register();
             break;
         }
     } else {
         if(isset($_POST["name"])){
-            $LoginController->guardarRegistro($_POST);
+            $LoginController->saveRegister($_POST);
         } else {
-            $LoginController->validarLogin($_POST);
+            $LoginController->validLogin($_POST);
         }
     }
 

@@ -8,7 +8,7 @@
     if($method == "GET"){
         if(isset($_GET["ac"])){
             switch ($_GET["ac"]) {
-                case 'h':
+            case 'h':
                 $HomeController->homeMenu();
                 break;
             }

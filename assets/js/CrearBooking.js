@@ -30,7 +30,6 @@ $(document).ready(function(){
         })
     })
 
-
     $("#crearBooking").click(function(){
         if($("#start-date").val() == "" || $("#end-date").val() == ""){       
             if($("#start-date").val() == ""){
