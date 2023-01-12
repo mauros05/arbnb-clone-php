@@ -1,7 +1,7 @@
 <main role="main">
     <div class="jumbotron d-flex align-items-center" style="background-color: white; height: 200px; width: auto;">
         <div class="container d-flex justify-content-center ">
-            <h1 class="jumbotron-heading">Tus Apartamentos</h1>
+            <h1 class="jumbotron-heading">Your Apartments</h1>
         </div>
     </div>
     <div class="album py-5">

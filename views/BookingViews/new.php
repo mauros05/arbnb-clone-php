@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="mb-3">Reservar Apartamento</h1>
+    <h1 class="mb-3">Book Apartment</h1>
     <div class="cards-container">
         <div class="container py-5">
             <div class="row justify-content-center">
@@ -12,13 +12,13 @@
                             </div>
                             <div>
                                 <div class="d-flex justify-content-between">
-                                    <span>Dueño</span><span><?= $res["nombre_us"] ?></span>
+                                    <span>Owner</span><span><?= $res["nombre_us"] ?></span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <span>Precio por noche</span><span>$<span id="price-night"><?= $res["precio"] ?></span> </span>
+                                    <span>Price per night</span><span>$<span id="price-night"><?= $res["precio"] ?></span> </span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <span>Numero de Noches</span><span id="num-days">0</span>
+                                    <span>Number of nights</span><span id="num-days">0</span>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between total font-weight-bold mt-4">
@@ -37,8 +37,8 @@
                         
                         <div class="card-body">
                             <div class="text-center">
-                                <h5 class="card-title">Perfil de quien Reserva</h5>
-                                <p class="mb-4" style="color: blue;">Verifica tus datos</p>
+                                <h5 class="card-title">Profile of the Booking Person</h5>
+                                <p class="mb-4" style="color: blue;">Verify your information</p>
                             </div>
                             <div>
                                 <div class="d-flex justify-content-between">
@@ -58,7 +58,7 @@
         <div class="row mb-4">
             <div class="col">
                 <div>
-                    <label for="start-date" class="form-label">Fecha de Inicio:</label>
+                    <label for="start-date" class="form-label">Start Date:</label>
                     <input type="date"  class="form-control" name="start-date" id="start-date" value=''/>
                     <div id="start-date-error" style="color: red" hidden></div>
                 </div>
@@ -66,7 +66,7 @@
 
             <div class="col">
                 <div>
-                    <label for="end-date" class="form-label">Fecha de Finalizacion:</label>
+                    <label for="end-date" class="form-label">End Date:</label>
                     <input type="date" name="end-date" class="form-control" id="end-date" value='' disabled/>
                     <div id="end-date-error" style="color: red" hidden></div>
                 </div>
@@ -79,7 +79,7 @@
         <input type="text" name="precio_total" id="precio_total" value="" hidden>
         <input type="text" name="accion" value="cb" hidden>
             
-        <button type="button" class="btn btn-dark mt-3 mb-3" id="crearBooking">Reservar</button>
+        <button type="button" class="btn btn-dark mt-3 mb-3" id="crearBooking">Book</button>
     </form>
 </div>
 
