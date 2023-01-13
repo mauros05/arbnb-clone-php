@@ -1,9 +1,5 @@
 <main role="main">
-  <div class="jumbotron d-flex align-items-center" style="background-color: white; height: 200px; width: auto;">
-    <div class="container d-flex justify-content-center ">
-      <h1 class="jumbotron-heading">Arbnb with PHP example</h1>
-    </div>
-  </div>
+  <?php require_once "views/Components/Banner.php"; ?>
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
@@ -29,3 +25,9 @@
   </div>
 </main>
 
+<style>
+  .fa-dollar-sign{
+    color: green;
+    margin-right: 4px;
+  }
+</style>

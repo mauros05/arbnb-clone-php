@@ -10,8 +10,8 @@
 }
 
 .footer-links {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .footer-links a {
@@ -22,7 +22,7 @@ align-items: center;
 }
 
 .footer-links a:hover {
-opacity: 1;
+    opacity: 1;
 }
 
 .footer .fa-heart {

@@ -2,7 +2,7 @@ $(document).ready(function(){
     let obj = {};
     $("#crearApartamento").click(function(event){
         event.preventDefault;
-
+        
         if($("#nombre").val() =="" || 
            $("#direccion").val() =="" || 
            $("#precio").val() =="" || 
