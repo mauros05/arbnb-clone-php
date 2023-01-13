@@ -165,7 +165,7 @@
                 return $data;
                 
             } else {
-                $data["message"] = "No se encontraron Departamentos";
+                $data["message"] = "No Apartments found";
                 return $data;
             }
         }

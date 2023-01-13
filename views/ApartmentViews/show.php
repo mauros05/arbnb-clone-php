@@ -1,10 +1,16 @@
 <form action="">
 <main role="main">
-  <div class="jumbotron mt-5">
-    <div class="container">
-      <h1 class="display-3"><?= $res["nombre"]; ?></h1>
-      <p>Address: <span><?= $res["direccion"]; ?></span></p>
-      <p>Owner: <span><?= $res["nombre_completo"]; ?></span></p>
+  <div class="jumbotron">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://a0.muscache.com/im/pictures/miso/Hosting-37914529/original/4619bdce-dfdb-45ff-86f8-a8700cdae496.jpeg?im_w=960)">
+      <?= $res["nombre"]; ?>
+    </div>
+    <div class="container mt-4">
+      <p>Address: <strong><?= $res["direccion"]; ?></strong></p>
+      <p>Owner: <strong><?= $res["nombre_completo"]; ?></strong></p>
+      <p>Description: <?= $res["descripcion"]; ?></p>
+      <p>Price: <strong><?= $res["precio"]; ?></strong></p>
+
+      <hr>
       <div class="d-flex">
         <?php if(isset($_SESSION)) {?>
           <?php if($_SESSION["id_usuario"] != $res["id_usuario"]) {?>
@@ -22,15 +28,7 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Price: <span><?= $res["precio"]; ?></span></h2>
-            <p><?= $res["descripcion"]; ?></p>
-        </div>
-    </div>
-    <hr>
-  </div>
+  
 </main>
 
 <input type="text"  id="id-apartment" value="<?= $res["id_apartment"] ?>" hidden>
@@ -67,3 +65,22 @@
     </div>
   </div>
 </div>
+
+<style>
+  .card-category {
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+
+</style>
