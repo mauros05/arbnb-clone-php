@@ -41,7 +41,7 @@ $(document).ready(function(){
             }
         } else {
             
-            let data  = $("#crear-apartamento").serialize();
+            let data  = $("#create-apartament").serialize();
             obj.data  = data;
             obj.url   = "apartment.php";
             obj.type  = "POST";

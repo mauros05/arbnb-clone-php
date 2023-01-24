@@ -57,20 +57,20 @@
 
         public function create($data){
             $query = "INSERT INTO apartments(nombre, direccion, descripcion, precio, id_usuario) 
-                                  VALUES('".$data["nombre"]."',
-                                         '".$data["direccion"]."',
-                                         '".$data["descripcion"]."', 
-                                         ".$data["precio"].", 
-                                         ".$data["id_usuario"].")";
+                                  VALUES('".$data["name"]."',
+                                         '".$data["address"]."',
+                                         '".$data["description"]."', 
+                                         ".$data["price"].", 
+                                         ".$data["id_user"].")";
             $queryRes = mysqli_query($this->db, $query);
             
             if(!$queryRes){
                 $res["flag"] = 0;
-                $res["res_message"] = "Hubo un error al guardar el apartamento";
+                $res["res_message"] = "There was an error saving";
                 return $res;
             }else {
                 $res["flag"] = 1;
-                $res["res_message"] = "Guardado Exitoso";
+                $res["res_message"] = "Successful Save";
                 return $res;
             }
         }

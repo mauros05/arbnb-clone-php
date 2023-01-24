@@ -29,8 +29,8 @@
         }
 
         public function new(){
-            $data["Title"]      = "Nuevo Departamento";
-            $data["Url_Jquery"] = "assets/js/CrearApartamento.js";
+            $data["Title"]      = "New Apartment";
+            $data["Url_Jquery"] = "assets/js/CreateApartment.js";
             
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
