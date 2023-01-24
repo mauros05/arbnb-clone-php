@@ -5,42 +5,41 @@
         <div class="row mb-4">
             <div class="col">
                 <div>
-                    <label for="nombre" class="form-label">Name:</label>
-                    <input type="text"  class="form-control" name="nombre" id="nombre" value=''/>
-                    <div id="nombre-error" style="color: red" hidden></div>
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text"  class="form-control" name="nombre" id="name" value=''/>
+                    <div id="name-error" style="color: red" hidden></div>
                 </div>
             </div>
 
             <div class="col">
                 <div>
-                    <label for="direccion" class="form-label">Adress:</label>
-                    <input type="text" name="direccion" class="form-control" id="direccion" value=''/>
-                    <div id="direccion-error" style="color: red" hidden></div>
+                    <label for="address" class="form-label">Address:</label>
+                    <input type="text" name="direccion" class="form-control" id="address" value=''/>
+                    <div id="address-error" style="color: red" hidden></div>
                 </div>
             </div>
 
             <div class="col">
                 <div>
-                    <label for="precio" class="form-label">Price per night:</label>
-                    <input type="number" name="precio" class="form-control" id="precio" value=''/>
-                    <div id="precio-error" style="color: red" hidden></div>
+                    <label for="price" class="form-label">Price per night:</label>
+                    <input type="number" name="precio" class="form-control" id="price" value=''/>
+                    <div id="price-error" style="color: red" hidden></div>
                 </div>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="descripcion" class="form-label">Description:</label>
-            <textarea type="text" name="descripcion" class="form-control" id="descripcion" value=''></textarea>
-            <div id="descripcion-error" style="color: red" hidden></div>
+            <label for="description" class="form-label">Description:</label>
+            <textarea type="text" name="descripcion" class="form-control" id="description" value=''></textarea>
+            <div id="description-error" style="color: red" hidden></div>
         </div>
 
         <input type="text" name="id_usuario" value="<?= $_SESSION["id_usuario"] ?>" hidden>
         <input type="text" name="accion" value="ca" hidden>
             
-        <button type="button" class="btn btn-dark mt-3 mb-3" id="crearApartamento">Create</button>
+        <button type="button" class="btn btn-dark mt-3 mb-3" id="createApartament">Create</button>
     </form>
 </div>
-
 
 <div class="modal fade" id="modalCreateApartment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

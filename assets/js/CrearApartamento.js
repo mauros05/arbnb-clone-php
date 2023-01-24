@@ -1,43 +1,43 @@
 $(document).ready(function(){
     let obj = {};
-    $("#crearApartamento").click(function(event){
+    $("#createApartament").click(function(event){
         event.preventDefault;
         
-        if($("#nombre").val() =="" || 
-           $("#direccion").val() =="" || 
-           $("#precio").val() =="" || 
-           $("#descripcion").val() =="" ){
+        if($("#name").val() =="" || 
+           $("#address").val() =="" || 
+           $("#price").val() =="" || 
+           $("#description").val() =="" ){
 
-            if($("#nombre").val() == ""){
-                $("#nombre-error").html("El nombre no puede ser vacio");
-                $("#nombre-error").removeAttr("hidden");
+            if($("#name").val() == ""){
+                $("#name-error").html("The name can not be blank");
+                $("#name-error").removeAttr("hidden");
             } else {
-                $("#nombre-error").html("");
-                $("#nombre-error").attr("hidden", true)
+                $("#name-error").html("");
+                $("#name-error").attr("hidden", true)
             }
 
-            if($("#direccion").val() == ""){
-                $("#direccion-error").html("La direccion no puede ser vacia");
-                $("#direccion-error").removeAttr("hidden");
+            if($("#address").val() == ""){
+                $("#address-error").html("The address can not be blank");
+                $("#address-error").removeAttr("hidden");
             } else {
-                $("#direccion-error").html("");
-                $("#direccion-error").attr("hidden", true);
+                $("#address-error").html("");
+                $("#address-error").attr("hidden", true);
             }
 
-            if($("#precio").val() == ""){
-                $("#precio-error").html("El departamento debe de tener precio");
-                $("#precio-error").removeAttr("hidden");
+            if($("#price").val() == ""){
+                $("#price-error").html("The price can not be blank");
+                $("#price-error").removeAttr("hidden");
             } else {
-                $("#precio-error").html("");
-                $("#precio-error").attr("hidden", true);
+                $("#price-error").html("");
+                $("#price-error").attr("hidden", true);
             }
 
-            if($("#descripcion").val() == ""){
-                $("#descripcion-error").html("El departamento debe de tener una descripcion");
-                $("#descripcion-error").removeAttr("hidden");
+            if($("#description").val() == ""){
+                $("#description-error").html("The description can not be blank");
+                $("#description-error").removeAttr("hidden");
             } else {
-                $("#descripcion-error").html("");
-                $("#descripcion-error").attr("hidden", true);
+                $("#description-error").html("");
+                $("#description-error").attr("hidden", true);
             }
         } else {
             
