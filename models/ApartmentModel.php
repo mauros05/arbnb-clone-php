@@ -17,21 +17,23 @@
                 $i = 0;
                 while($rows = mysqli_fetch_assoc($queryRes)){
                     $data["id_apartment"][$i] = $rows["id_apartment"];
-                    $data["nombre"][$i]       = $rows["nombre"];
-                    $data["descripcion"][$i]  = $rows["descripcion"];
-                    $data["precio"][$i]       = $rows["precio"];
+                    $data["name"][$i]         = $rows["nombre"];
+                    $data["description"][$i]  = $rows["descripcion"];
+                    $data["price"][$i]        = $rows["precio"];
                     $i ++;
                 }
 
                 return $data;
-                
             } else {
-                return "No se encontraron Departamentos";
+                return "No apartments found";
             }
         }
 
         public function show($id){
-            $query = "SELECT a.*, u.nombres, u.apellido_paterno, u.apellido_materno
+            $query = "SELECT a.*, 
+                             u.nombres, 
+                             u.apellido_paterno, 
+                             u.apellido_materno
                       FROM apartments a
                       INNER JOIN usuarios u
                       ON a.id_usuario = u.id_usuario
@@ -42,7 +44,7 @@
             if(mysqli_num_rows($queryRes) > 0){
                 while($rows = mysqli_fetch_assoc($queryRes)){                    
                     $data["id_apartment"]    = $rows["id_apartment"];
-                    $data["nombre"]          = $rows["nombre"];
+                    $data["name"]            = $rows["nombre"];
                     $data["direccion"]       = $rows["direccion"];
                     $data["descripcion"]     = $rows["descripcion"];
                     $data["precio"]          = $rows["precio"];
@@ -57,20 +59,20 @@
 
         public function create($data){
             $query = "INSERT INTO apartments(nombre, direccion, descripcion, precio, id_usuario) 
-                                  VALUES('".$data["nombre"]."',
-                                         '".$data["direccion"]."',
-                                         '".$data["descripcion"]."', 
-                                         ".$data["precio"].", 
-                                         ".$data["id_usuario"].")";
+                                  VALUES('".$data["name"]."',
+                                         '".$data["address"]."',
+                                         '".$data["description"]."', 
+                                         ".$data["price"].", 
+                                         ".$data["id_user"].")";
             $queryRes = mysqli_query($this->db, $query);
             
             if(!$queryRes){
                 $res["flag"] = 0;
-                $res["res_message"] = "Hubo un error al guardar el apartamento";
+                $res["res_message"] = "There was an error saving";
                 return $res;
             }else {
                 $res["flag"] = 1;
-                $res["res_message"] = "Guardado Exitoso";
+                $res["res_message"] = "Successful Save";
                 return $res;
             }
         }
