@@ -2,7 +2,7 @@
   <main role="main">
     <div class="jumbotron">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://a0.muscache.com/im/pictures/miso/Hosting-37914529/original/4619bdce-dfdb-45ff-86f8-a8700cdae496.jpeg?im_w=960)">
-        <?= $res["nombre"]; ?>
+        <?= $res["name"]; ?>
       </div>
       <div class="container mt-4">
         <p>Address: <strong><?= $res["direccion"]; ?></strong></p>
@@ -20,7 +20,6 @@
             <p class="mt-2 mb-2"><a class="btn btn-dark btn-lg me-2" href="login.php?ac=lg" role="button">Book</a></p>
           <?php }  ?>
           <?php if (isset($_SESSION["id_usuario"]) && $_SESSION["id_usuario"] == $res["id_usuario"]) { ?>
-              <?php var_dump($res); ?>
               <p class="mt-2 mb-2"><a class="btn btn-primary btn-lg me-2" href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button">Edit</a></p>
               <p class="mt-2 mb-2"><a href="apartment.php?ac=e&idap=<?= $res["id_apartment"] ?>" role="button"></a></p>
               <p class="mt-2 mb-2"><button  type="button" class="btn btn-warning btn-lg" id="delete-apartment">Delete</button></p>   

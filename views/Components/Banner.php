@@ -2,7 +2,6 @@
   <div class="container">
     <h1>Arbnb brings <strong>fun</strong> to <strong>people</strong>!</h1>
     <p>Change your life traveling around the world.</p>
-    <a class="btn btn-flat" href="#">Book now</a>
   </div>
 </div>
 

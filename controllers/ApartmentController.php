@@ -7,7 +7,7 @@
 
         public function index_my_apartments($id){
             $res = $this->ApartmentModel->index_my_apartments($id);
-            $data["Title"]      = "Mis apartamentos";
+            $data["Title"] = "My apartments";
             
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
@@ -18,8 +18,8 @@
 
         public function show($id){
             $res = $this->ApartmentModel->show($id);
-            $data["Title"]      = $res["nombre"];
-            $data["Url_Jquery"] = "assets/js/ShowApartamento.js";
+            $data["Title"]      = $res["name"];
+            $data["Url_Jquery"] = "assets/js/ShowApartament.js";
 
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";
@@ -46,8 +46,8 @@
         }
 
         public function edit($id){
-            $data["Title"]      = "Editar Departamento";
-            $data["Url_Jquery"] = "assets/js/EditarApartamento.js";
+            $data["Title"]      = "Edit Apartment";
+            $data["Url_Jquery"] = "assets/js/EditApartament.js";
 
             $res = $this->ApartmentModel->edit($id);
 

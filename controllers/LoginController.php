@@ -25,9 +25,8 @@
         }
 
         public function saveRegister($data){
-            // Metodo para generar el Usuario
-            $PrimerNombre     = explode(" ",$data["name"]);
-            $data["username"] = $PrimerNombre[0] . $data["first_name"];
+            $FirstName = explode(" ",$data["name"]);
+            $data["username"] = $FirstName[0] . $data["first_name"];
        
             $res = $this->LoginModel->saveRegister($data);
 
@@ -36,18 +35,18 @@
 
         public function validLogin($data){
             $res = $this->LoginModel->validLogin($data);
-            $resValidacion = NULL;
+            $resValidation = NULL;
 
             if(!empty($res["id_usuario"])){
                 session_start();
                 $_SESSION = $res;
-                $resValidacion["flag"] = 1; 
+                $resValidation["flag"] = 1; 
             } else {
-                $resValidacion["msg_error"] = $res;
-                $resValidacion["flag"] = 0; 
+                $resValidation["msg_error"] = $res;
+                $resValidation["flag"] = 0; 
             }
 
-            echo json_encode($resValidacion);
+            echo json_encode($resValidation);
             exit;
         }
 

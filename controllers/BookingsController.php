@@ -8,7 +8,7 @@
         public function new($data){
             $res = $this->BookingsModel->new($data);
             $data["Title"]      = "Booking Apartment";
-            $data["Url_Jquery"] = "assets/js/CrearBooking.js";
+            $data["Url_Jquery"] = "assets/js/CreateBooking.js";
 
             require_once "config/Config.php";
             require_once "views/Templates/Header.php";

@@ -7,7 +7,7 @@
         }
 
         public function home(){
-            $data["Title"] = "Home";
+            $data["Title"] = "Arbnb-Clone";
             
             $res = $this->ApartmentModel->index();
             
@@ -18,7 +18,7 @@
         }
 
         public function homeMenu(){
-            $data["Title"] = "Menu";
+            $data["Title"] = "Arbnb-Clone";
             
             $res = $this->ApartmentModel->index();
             

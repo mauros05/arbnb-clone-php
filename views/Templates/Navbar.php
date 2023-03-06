@@ -17,7 +17,7 @@
         <?php } ?>
         <?php if (isset($_SESSION["id_usuario"])) { ?>
           <li class="nav-item">
-            <a class="nav-link"  href="apartment.php?ac=ma&idu=<?=$_SESSION["id_usuario"] ?>">Mis Apartamentos</a>
+            <a class="nav-link"  href="apartment.php?ac=ma&idu=<?=$_SESSION["id_usuario"] ?>">My Apartments</a>
           </li>
         <?php } ?>
       </ul>
